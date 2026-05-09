@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanskar Gurung | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 2px solid #7f77dd;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    header h1 span { color: #7f77dd; }
+
+    header p {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #7f77dd22;
+      border: 1px solid #7f77dd;
+      color: #a09de8;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 16px;
+      background: #16213e;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #7f77dd; }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #7f77dd;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #2a2a3e;
+    }
+
+    .card {
+      background: #1a1a2e;
+      border: 1px solid #2a2a3e;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover { border-color: #7f77dd; }
+
+    .card h3 { color: #fff; margin-bottom: 8px; }
+    .card p { color: #aaa; line-height: 1.6; font-size: 0.95rem; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .skill-tag {
+      background: #7f77dd22;
+      border: 1px solid #7f77dd55;
+      color: #a09de8;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .about-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 2rem; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 0.85rem;
+      border-top: 1px solid #2a2a3e;
+      margin-top: 40px;
+    }
+
+    .highlight { color: #7f77dd; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sanskar <span>Gurung</span></h1>
+    <p>Student ID: 02250368</p>
+    <p>Bachelor of Engineering in Software Engineering</p>
+    <div class="badge">🎓 College of Science and Technology, RUB</div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="card">
+          <h3>👋 Hello!</h3>
+          <p>I'm Sanskar Gurung, a Software Engineering student passionate about building meaningful applications and learning modern DevOps practices.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Goals</h3>
+          <p>I aim to become a full-stack developer with strong DevOps skills, building scalable and reliable software systems.</p>
+        </div>
+        <div class="card">
+          <h3>📚 Currently Learning</h3>
+          <p>CI/CD pipelines, Docker, cloud deployment, and modern web development frameworks.</p>
+        </div>
+        <div class="card">
+          <h3>🌏 Location</h3>
+          <p>Phuntsholing, Bhutan 🇧🇹</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top: 40px;">
+      <h2 class="section-title">Skills</h2>
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <div class="skills">
+          <span class="skill-tag">HTML & CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Render.com</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top: 40px;">
+      <h2 class="section-title">Projects</h2>
+      <div class="card">
+        <h3>📝 To-Do List App (DSO101 - A3)</h3>
+        <p>A Node.js Express application with full CRUD API, containerized with Docker and deployed via a complete CI/CD pipeline using GitHub Actions and Render.com.</p>
+        <div class="skills" style="margin-top: 12px;">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Render.com</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>🌐 Portfolio Website (DSO101 - A4)</h3>
+        <p>This portfolio website — built with HTML & CSS and automatically deployed to Render.com using GitHub Actions CI/CD pipeline.</p>
+        <div class="skills" style="margin-top: 12px;">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Render.com</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top: 40px;">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <h3>📬 Get in Touch</h3>
+        <p>📧 Email: <span class="highlight">02250368.cst@rub.edu.bt</span></p>
+        <p style="margin-top: 8px;">🐙 GitHub: <span class="highlight">github.com/gantay11</span></p>
+        <p style="margin-top: 8px;">🏫 Institution: <span class="highlight">College of Science and Technology, RUB</span></p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Sanskar Gurung · 02250368 · DSO101 Assignment IV</p>
+    <p style="margin-top: 6px;">Deployed with ❤️ using GitHub Actions & Render.com</p>
+  </footer>
+
+</body>
+</html>
