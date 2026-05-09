@@ -1,0 +1,77 @@
+
+##  Live Deployment
+
+**Render.com App URL**: https://sanskargurung-02250368-dso101-a4.onrender.com
+
+## Repository Structure
+
+sanskargurung_02250368_DSO101_A4/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions CI/CD workflow
+├── index.html             # Portfolio website
+└── README.md              # This file
+
+##  Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| GitHub | Source code hosting |
+| GitHub Actions | CI/CD automation |
+| Render.com | Cloud deployment (Static Site) |
+| HTML & CSS | Frontend website |
+
+##  Steps Taken
+
+### Step 1 – Created the Web App
+- Built a personal portfolio static website using HTML and CSS.
+- The page includes About, Skills, Projects, and Contact sections.
+- No framework or build tool needed — pure HTML and CSS.
+
+### Step 2 – Pushed to GitHub
+- Created a new public GitHub repository named `sanskargurung_02250368_DSO101_A4`.
+- Initialized git and pushed all files to the `main` branch:
+
+git init
+git add .
+git commit -m "Initial commit: portfolio website"
+git branch -M main
+git remote add origin https://github.com/gantay11/sanskargurung_02250368_DSO101_A4.git
+git push -u origin main
+
+### Step 3 – Set up GitHub Actions
+- Created `.github/workflows/deploy.yml` in the repository root.
+- The workflow triggers on every push to `main` and calls the Render deploy webhook.
+- Added `RENDER_DEPLOY_HOOK_URL` as a GitHub repository secret.
+
+### Step 4 – Deployed on Render.com
+- Created a new **Static Site** on Render.com (not Web Service — no Docker needed).
+- Connected the GitHub repository directly.
+- Set Publish Directory to `.` (root folder where `index.html` lives).
+- Render automatically deployed the site in under 1 minute.
+- Copied the Deploy Hook URL from Render Settings and added it as a GitHub secret.
+
+
+##  GitHub Secrets Used
+
+ Secret Name  
+  RENDER_DEPLOY_HOOK_URL
+
+>  The deploy hook URL is kept secret — never hardcoded in source code.
+
+## ⚠️ Challenges Faced
+
+1. **Deploy hook URL accidentally exposed** – The Render deploy hook URL was accidentally pasted into README.md instead of the live site URL. Fixed immediately by correcting the README and regenerating the deploy hook on Render to invalidate the old URL.
+
+2. **Workflow failing due to stale secret** – After regenerating the deploy hook, the GitHub secret still had the old URL. Fixed by updating the secret with the new URL in GitHub Settings → Secrets → Actions.
+
+3. **Static Site vs Web Service** – Initially confused between Static Site and Web Service on Render. Static Site is the correct option for plain HTML/CSS websites — no Docker or Node.js required.
+
+
+## Learning Outcomes
+
+- Learned how to deploy a static website directly from GitHub to Render.com.
+- Understood how GitHub Actions triggers Render redeployment via webhooks on every push.
+- Gained experience managing secrets securely in GitHub.
+- Understood the difference between Static Site and Web Service deployments.
+- Learned the importance of never exposing secrets in source code.
